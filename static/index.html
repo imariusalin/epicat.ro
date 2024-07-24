@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ePicat.ro - Verifica Daca Site-ul Tau este picat sau nu!</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center bg-gray-700 p-4 rounded-lg">
+            <div class="flex items-center">
+                <h1 class="text-3xl font-bold" id="title">ePicat</h1>
+            </div>
+            <select id="languageSelect" class="p-2 border rounded text-black">
+                <option value="en">English</option>
+                <option value="ro">Romanian</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="it">Italian</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-4 flex-grow">
+        <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+            <input id="domainInput" type="text" placeholder="Enter domain" class="w-full p-2 border rounded mb-4">
+            <button id="checkButton" class="w-full bg-blue-500 text-white p-2 rounded">Check Domain</button>
+        </div>
+        <div id="result" class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md mt-4 hidden">
+            <h2 class="text-xl font-bold mb-4" id="domainInfoTitle">Domain Info</h2>
+            <p class="text-2xl"><strong id="statusLabel">Status:</strong> <span id="status"></span></p>
+            <p><strong id="ipLabel">IP:</strong> <span id="ip"></span></p>
+            <p><strong id="nameserversLabel">Nameservers:</strong> <span id="nameservers"></span></p>
+            <p><strong id="reversednsLabel">Reverse DNS:</strong> <span id="reversedns"></span></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>Made with ❤️ in <img src="romania-flag.svg" alt="Romania Flag" class="w-5 h-5 inline-block"> by <a href="https://d3v.ro" class="underline">D3v.ro</a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
