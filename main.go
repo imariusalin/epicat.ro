@@ -53,6 +53,6 @@ func main() {
 	http.Handle("/", http.FileServer(http.Dir("./static")))
 	http.HandleFunc("/check", checkDomain)
 
-	fmt.Println("Server started at :8080")
-	http.ListenAndServe(":8080", nil)
+	fmt.Println("Server started at :7001")
+	http.ListenAndServe(":7001", nil)
 }
